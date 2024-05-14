@@ -9,7 +9,6 @@ This web application allows users to add, view, access, and rate campgrounds by 
 - **Passport package with local strategy**: For authentication and authorization.
 - **Cloudinary**: Used for cloud-based image storage.
 - **Helmet**: Enhances application security.
-- ...
 
 ## Setup Instructions
 
@@ -25,11 +24,13 @@ SECRET=[Your Chosen Secret Key] # This can be any value you prefer
 ```
 
 After configuring the .env file, you can start the project by running:
+
 ```sh
 docker compose up
 ```
 
 ## Application Screenshots
+
 ![](./images/home.jpg)
 ![](./images/campgrounds.jpg)
 ![](./images/register.jpg)
