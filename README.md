@@ -6,13 +6,15 @@ This NodeJS web application integrates sophisticated user features such as regis
 
 - **Node.js**: Serves as the runtime environment for the server-side logic.
 - **MongoDB Atlas**: Database service used for storing all application data.
+- **Docker**: Used for containerizing the application and ensuring consistent environments across different stages.
+- **Jenkins**: Automates the continuous integration and deployment pipelines.
+- **AWS (Amazon Web Services)**: Provides cloud infrastructure for hosting services and managing resources, including the use of Elastic Kubernetes Service (EKS).
+- **Kubernetes**: Manages container orchestration to ensure the application scales and deploys efficiently across the cloud environment.
+- **SonarQube**: Assists in continuous inspection of code quality.
+- **Trivy**: Security scanning tool that detects vulnerabilities in the application and Docker images.
 - **Cloudinary**: Manages cloud-based image storage and manipulation.
 - **Mapbox**: Provides interactive maps where users can view camp locations.
 - **Express**: Web application framework for Node.js.
-- **Docker**: Used for containerizing the application and ensuring consistent environments across different stages.
-- **Jenkins**: Automates the continuous integration and deployment pipelines.
-- **SonarQube**: Assists in continuous inspection of code quality.
-- **Trivy**: Security scanning tool that detects vulnerabilities in the application and Docker images.
 
 ## DevOps Configuration and Deployment
 
