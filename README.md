@@ -1,33 +1,65 @@
-# Yelp Camp Web Application
+# NodeJS-DevOps Application
 
-This web application allows users to add, view, access, and rate campgrounds by location. It is based on "The Web Developer Bootcamp" by Colt Steele, but includes several modifications and bug fixes. The application leverages a variety of technologies and packages, such as:
+This NodeJS web application integrates sophisticated user features such as registration/login, camp setups, image uploads via Cloudinary, and viewing camps on an interactive Mapbox cluster map. It is developed with a focus on robust DevOps practices to streamline development and deployment processes.
 
-- **Node.js with Express**: Used for the web server.
-- **Bootstrap**: For front-end design.
-- **Mapbox**: Provides a fancy cluster map.
-- **MongoDB Atlas**: Serves as the database.
-- **Passport package with local strategy**: For authentication and authorization.
-- **Cloudinary**: Used for cloud-based image storage.
-- **Helmet**: Enhances application security.
+## Technology Stack
+
+- **Node.js**: Serves as the runtime environment for the server-side logic.
+- **MongoDB Atlas**: Database service used for storing all application data.
+- **Cloudinary**: Manages cloud-based image storage and manipulation.
+- **Mapbox**: Provides interactive maps where users can view camp locations.
+- **Express**: Web application framework for Node.js.
+- **Docker**: Used for containerizing the application and ensuring consistent environments across different stages.
+- **Jenkins**: Automates the continuous integration and deployment pipelines.
+- **SonarQube**: Assists in continuous inspection of code quality.
+- **Trivy**: Security scanning tool that detects vulnerabilities in the application and Docker images.
+
+## DevOps Configuration and Deployment
+
+### DevOps Tools and Pipelines
+
+The project utilizes Jenkins for orchestrating the CI/CD workflows, Docker for application containerization, SonarQube for code quality analysis, and Trivy for security assessments. The deployment process is structured into two main pipelines:
+
+- **Dev Deployment**: Manages the integration and testing phases, including security scans and Docker image preparations.
+- **Production Deployment**: Extends the Dev pipeline to deploy the application on AWS Elastic Kubernetes Service (EKS) using an automated Jenkins pipeline.
+
+### AWS EKS Setup
+
+The application is deployed using AWS EKS, ensuring scalable and secure management of Kubernetes resources:
+
+- **EKS Cluster Configuration**:
+  - The cluster setup is initiated without a default node group, allowing custom configuration.
+  - Integration with IAM OIDC provider enhances security and management of permissions within AWS services.
+- **AWS CLI and kubectl Configuration**:
+  - Tools such as AWS CLI and kubectl are configured to interact with AWS services and manage Kubernetes resources effectively.
+
+## Security and Compliance
+
+Security is a cornerstone of the project's DevOps strategy. It integrates Trivy for comprehensive vulnerability scanning and SonarQube for ongoing code quality checks, ensuring that the application adheres to high security and quality standards.
 
 ## Setup Instructions
 
-To get this application up and running, you'll need to set up accounts with Cloudinary, Mapbox, and MongoDB Atlas. Once these are set up, create a `.env` file in the same folder as `app.js`. This file should contain the following configurations:
+To deploy this application, you will need to configure several tools and accounts:
 
-```sh
-CLOUDINARY_CLOUD_NAME=[Your Cloudinary Cloud Name]
-CLOUDINARY_KEY=[Your Cloudinary Key]
-CLOUDINARY_SECRET=[Your Cloudinary Secret]
-MAPBOX_TOKEN=[Your Mapbox Token]
-DB_URL=[Your MongoDB Atlas Connection URL]
-SECRET=[Your Chosen Secret Key] # This can be any value you prefer
-```
+1. Create accounts on Cloudinary, Mapbox, and MongoDB Atlas.
+2. Configure environment variables in a `.env` file located in your project directory as follows:
 
-After configuring the .env file, you can start the project by running:
+   ```sh
+   CLOUDINARY_CLOUD_NAME=[Your Cloudinary Cloud Name]
+   CLOUDINARY_KEY=[Your Cloudinary Key]
+   CLOUDINARY_SECRET=[Your Cloudinary Secret]
+   MAPBOX_TOKEN=[Your Mapbox Token]
+   DB_URL=[Your MongoDB Atlas Connection URL]
+   SECRET=[Your Chosen Secret Key]
+   ```
 
-```sh
-docker compose up
-```
+3. To start the application, run the following command:
+
+   ```sh
+   docker compose up
+   ```
+
+This project was built by following this [YouTube video](https://www.youtube.com/@devopsshack) and this [GitHub repository](https://github.com/jaiswaladi246/3-Tier-Full-Stack).
 
 ## Application Screenshots
 

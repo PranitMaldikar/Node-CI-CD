@@ -67,7 +67,7 @@ pipeline {
         stage('Deploy to EKS') {
     steps {
         withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: 'my-eks22', contextName: '', credentialsId: 'k8-token', namespace: 'webapps', serverUrl: 'https://83726CE4C9012A9FFAB4DA6A7AA7BABF.yl4.us-east-2.eks.amazonaws.com']]) {
-            sh "kubectl apply -f dss.yml"
+            sh "kubectl apply -f /Manifests"
             sleep 60
         }
     }
