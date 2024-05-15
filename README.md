@@ -1,4 +1,4 @@
-# NodeJS-DevOps Application
+# NodeJS DevOps Application
 
 This NodeJS web application integrates sophisticated user features such as registration/login, camp setups, image uploads via Cloudinary, and viewing camps on an interactive Mapbox cluster map. It is developed with a focus on robust DevOps practices to streamline development and deployment processes.
 
