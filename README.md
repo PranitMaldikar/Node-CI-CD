@@ -4,7 +4,7 @@ This NodeJS web application integrates sophisticated user features such as regis
 
 ## Architecture
 
-![](./images/home.jpg)
+![](./images/homearchitecture.png)
 
 ## Technology Stack
 
